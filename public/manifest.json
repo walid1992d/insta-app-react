@@ -1,0 +1,13 @@
+{
+  "name": "IBM Garage React",
+  "short_name": "IBM Garage React",
+  "start_url": ".",
+  "display": "standalone",
+  "icons": [{
+    "src": "icon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "background_color": "#3d69b0",
+  "theme_color": "#3d69b0"
+}

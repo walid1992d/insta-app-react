@@ -1,0 +1,79 @@
+{
+  "name": "insta-app-react",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": ".",
+  "main": "src/electron-starter.js",
+  "dependencies": {
+    "@ionic/core": "^4.4.2",
+    "@ionic/react": "0.0.5",
+    "@types/jest": "24.0.13",
+    "@types/react-dom": "16.8.4",
+    "@types/react-router": "^5.0.1",
+    "@types/react-router-dom": "^4.3.3",
+    "cordova-android": "^7.1.4",
+    "cordova-ios": "^4.5.5",
+    "cordova-plugin-whitelist": "^1.3.3",
+    "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "3.0.1",
+    "typescript": "3.4.5"
+  },
+  "scripts": {
+    "start": "REACT_APP_ENV=local react-scripts start",
+    "start:android": "npm run build && cordova run android --device",
+    "start:ios": "npm run build && cordova run ios --device",
+    "start:desktop": "npm run build && electron .",
+    "build": "react-scripts build && rm -rf www && mv build www",
+    "build:android": "npm run build && cordova build android",
+    "build:ios": "npm run build && cordova build ios",
+    "build:osx": "npm run build && node electron-scripts/osx-build.js",
+    "build:windows": "npm run build && node electron-scripts/windows-build.js",
+    "build:linux": "npm run build && node electron-scripts/linux-build.js",
+    "test": "react-scripts test ",
+    "eject": "react-scripts eject",
+    "resources:generate:mobile": "cordova-res-generator --platforms=ios,android"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.9.3",
+    "@types/node": "^12.0.2",
+    "@types/react": "^16.8.18",
+    "cordova": "^8.1.2",
+    "cordova-res-generator": "^0.4.2",
+    "electron": "^5.0.2",
+    "electron-packager": "^13.1.1",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.13.1",
+    "enzyme-to-json": "^3.3.5",
+    "react-test-renderer": "^16.8.6"
+  },
+  "jest" :{
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
+}
